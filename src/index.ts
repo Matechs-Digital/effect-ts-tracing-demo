@@ -1,6 +1,8 @@
-import * as R from "@app/Runtime"
+import "@effect-ts/node/Modules/Traced"
+
 import * as T from "@effect-ts/core/Effect"
 import { pipe } from "@effect-ts/core/Function"
+import * as R from "@effect-ts/node/Runtime"
 
 pipe(
   T.succeed(1),

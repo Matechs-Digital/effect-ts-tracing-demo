@@ -308,10 +308,10 @@
     "@effect-ts/core" "^0.10.0"
     "@effect-ts/monocle" "^0.9.0"
 
-"@effect-ts/node@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@effect-ts/node/-/node-0.2.2.tgz#ce0d213d4b4041af2e030ce50ba775f7c17b089e"
-  integrity sha512-j0z0rFdDBR7JyL6eIkyeyCUtLeoCTFZz6oqhcrkkGR46knpAG8LQ2N276G4EE0uO/TzyGsC/NN7mPRYLCTdFnQ==
+"@effect-ts/node@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@effect-ts/node/-/node-0.2.4.tgz#8c5f7b701d59eef48343fd11038ca05c9346b646"
+  integrity sha512-Kr+Awm77QsqzSuBnm2Tstag10ZPJ8Z+MYkwPMQah0i/Y7ZcuryZjxf6CCC8OIZ4TOfIGkVqXPUqjKsuHpXtvTw==
   dependencies:
     "@effect-ts/core" "^0.10.0"
 
