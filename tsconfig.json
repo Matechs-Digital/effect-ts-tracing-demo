@@ -1,32 +1,11 @@
 {
-  "compilerOptions": {
-    "downlevelIteration": true,
-    "lib": ["ES2019"],
-    "target": "ES2017",
-    "module": "CommonJS",
-    "strict": true,
-    "outDir": "lib",
-    "noErrorTruncation": true,
-    "noEmit": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "declaration": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "plugins": [
-      {
-        "transform": "./node_modules/@effect-ts/tracing-plugin/index.js",
-        "tracingModule": "@effect-ts/core/Tracing",
-        "relativeToRoot": "../../../"
-      }
-    ]
-  },
+  "extends": "./tsconfig.common.json",
   "include": [
     "src/**/*.ts",
     "test/**/*.ts",
     "scripts/**/*.ts",
     "migrations/**/*.ts",
-    "articles/**/*.ts"
+    "articles/**/*.ts",
+    "plugins/**/*.ts"
   ]
 }

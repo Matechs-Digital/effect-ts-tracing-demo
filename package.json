@@ -4,22 +4,26 @@
   "license": "UNLICENSED",
   "author": "Michael Arnaldi",
   "scripts": {
-    "build": "ttsc -p tsconfig.build.json",
-    "dev": "ts-node -C ttypescript -r tsconfig-paths/register src/index.ts",
+    "build": "rimraf lib; ttsc --p tsconfig.build.json; yarn prettier:lib",
+    "dev": "ts-node -C ttypescript src/index.ts",
     "start": "node -r source-map-support/register lib/index.js",
     "test": "jest",
     "type-check": "tsc --noEmit",
     "ci": "yarn type-check && yarn test --ci",
     "autofix": "yarn prettier && yarn lint --fix && yarn prettier",
     "prettier": "prettier --write \"./{src,test,demo}/**/*.ts\"",
+    "prettier:lib": "prettier --write \"./lib/**/*.js\"",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
-    "@effect-ts/core": "^0.8.42",
-    "@effect-ts/jest": "^0.2.42",
-    "@effect-ts/monocle": "^0.7.43",
-    "@effect-ts/morphic": "^0.8.59",
-    "@effect-ts/tracing-plugin": "^0.0.1",
+    "@effect-ts/core": "^0.10.0",
+    "@effect-ts/jest": "^0.4.0",
+    "@effect-ts/monocle": "^0.9.0",
+    "@effect-ts/morphic": "^0.10.0",
+    "@effect-ts/node": "^0.2.0",
+    "@effect-ts/system": "^0.8.0",
+    "@effect-ts/tracing-plugin": "^0.2.0",
+    "@effect-ts/tracing-utils": "^0.2.0",
     "@types/jest": "^26.0.10",
     "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^4.8.0",
@@ -38,11 +42,16 @@
     "nyc": "^15.1.0",
     "prettier": "^2.1.2",
     "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
     "source-map-support": "^0.5.19",
+    "ts-expose-internals": "^4.1.2",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
     "ttypescript": "^1.5.12",
     "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "typescript-transform-paths": "^2.1.0"
   }
 }
